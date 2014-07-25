@@ -5,7 +5,7 @@ SLIDE15.tile_size = 0;
 SLIDE15.board = null;
 SLIDE15.tiles = [];
 SLIDE15.emptyTile = null;
-SLIDE15.shuffleMoves = 10;
+SLIDE15.shuffleMoves = 100;
 SLIDE15.image = "";
 SLIDE15.cols = 4;
 
