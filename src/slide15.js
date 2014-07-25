@@ -8,6 +8,7 @@ SLIDE15.emptyTile = null;
 SLIDE15.shuffleMoves = 100;
 SLIDE15.image = "";
 SLIDE15.cols = 4;
+SLIDE15.moves = 0;
 
 SLIDE15.Game = function(img, w, h, url) {
 //    this.img = img;
@@ -61,6 +62,9 @@ SLIDE15.Board.prototype.shuffle = function() {
             moves--;
         }
     }
+  SLIDE15.moves = 0;
+  var movesDom = document.getElementById("moves");
+  movesDom.innerHTML = "Your moves: " + SLIDE15.moves;
 };
 
 SLIDE15.Tile = function(row, col, empty) {
@@ -72,7 +76,7 @@ SLIDE15.Tile = function(row, col, empty) {
         that.moveTile();
         var complete = SLIDE15.board.isComplete();
         if (complete) {
-            alert("You Win!!!");
+            alert("Congratulations! You finished with " + SLIDE15.moves + " moves!");
         }
     });
 
@@ -93,6 +97,7 @@ SLIDE15.Tile.prototype.setPosition = function(row, col) {
         if (row !== col || row !== SLIDE15.cols - 1) {
             this.dom.style.backgroundImage = 'url('+SLIDE15.image+')';
             this.dom.style.backgroundPosition = '-' + colVal + 'px -' + rowVal + 'px';
+
         }
     }
 };
@@ -118,6 +123,9 @@ SLIDE15.Tile.prototype.moveTile = function() {
     if (move) {
         SLIDE15.emptyTile.setPosition(this.posRow, this.posCol)
         this.setPosition(emptyRow, emptyCol);
+      SLIDE15.moves++;
+      var movesDom = document.getElementById("moves");
+      movesDom.innerHTML = "Your moves: " + SLIDE15.moves;
     }
 };
 
