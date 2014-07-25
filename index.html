@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-  <meta charset="UTF-8">
-  <title>Flickr Slide 15</title>
+    <meta charset="UTF-8">
+    <title>Flickr Slide 15</title>
+    <link rel="stylesheet" type="text/css" href="style/reset.css" media="screen">
+    <style>
+        body {
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+            color: #D8D8D8;
+            background-color: #222939;
+        }
+        #section {
+            width: 598px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        #header {
+            width: 100%;
+            padding: 20px 0 0 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            position: relative;
+        }
+        #board {
+            position: relative;
+            width: 598px;
+        }
+        .tile {
+            width: 147.5px;
+            height: 147.5px;
+            border: 1px solid #1B212F;
+            position: absolute;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #D8D8D8;
+            color:black;
+            overflow: hidden;
+        }
+        #tile33 {
+            background-color: #1B212F;
+        }
+        #url {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #url a {
+            color: #D05158;
+        }
+    </style>
 </head>
 <body>
-<div id="game">
-  <div id="tile11"></div>
-  <div id="tile12"></div>
-  <div id="tile13"></div>
-  <div id="tile14"></div>
-  <div id="tile21"></div>
-  <div id="tile22"></div>
-  <div id="tile23"></div>
-  <div id="tile24"></div>
-  <div id="tile31"></div>
-  <div id="tile32"></div>
-  <div id="tile33"></div>
-  <div id="tile34"></div>
-  <div id="tile41"></div>
-  <div id="tile42"></div>
-  <div id="tile43"></div>
-  <div id="empty"></div>
+<div id="section">
+    <div id="header">Flickr Slide 15</div>
+    <div id="url"><a href="#">Check out this picture on Flickr</a> </div>
+    <div id="board">
+        <div id="tile00" class="tile">00</div>
+        <div id="tile01" class="tile">01</div>
+        <div id="tile02" class="tile">02</div>
+        <div id="tile03" class="tile">03</div>
+        <div id="tile10" class="tile">10</div>
+        <div id="tile11" class="tile">11</div>
+        <div id="tile12" class="tile">12</div>
+        <div id="tile13" class="tile">13</div>
+        <div id="tile20" class="tile">20</div>
+        <div id="tile21" class="tile">21</div>
+        <div id="tile22" class="tile">22</div>
+        <div id="tile23" class="tile">23</div>
+        <div id="tile30" class="tile">30</div>
+        <div id="tile31" class="tile">31</div>
+        <div id="tile32" class="tile">32</div>
+        <div id="tile33" class="tile"></div>
+    </div>
 </div>
-<div id="url"></div>
+
 <script src="src/slide15.js"></script>
 <script>
-  (function() {
-    var game = new SLIDE15.Game("https://farm4.staticflickr.com/3714/14308017655_3dc8b44b99_c.jpg", 800, 598, "https://www.flickr.com/photos/115230743@N04/14308017655");
-  }());
+    (function() {
+        var game = new SLIDE15.Game("https://farm4.staticflickr.com/3714/14308017655_3dc8b44b99_c.jpg", 800, 598, "https://www.flickr.com/photos/115230743@N04/14308017655");
+    }());
 </script>
-<a href="https://www.flickr.com/photos/115230743@N04/14308017655" title="IMG_0008 1 by Cintia Higashi, on Flickr"><img src="https://farm4.staticflickr.com/3714/14308017655_3dc8b44b99_c.jpg" width="800" height="598" alt="IMG_0008 1"></a>
 </body>
 </html>
